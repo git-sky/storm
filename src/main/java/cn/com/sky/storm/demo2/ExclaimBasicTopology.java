@@ -12,6 +12,7 @@ public class ExclaimBasicTopology {
 
 		TopologyBuilder builder = new TopologyBuilder();
 
+//        一个task就是一个处理逻辑的实例。
 		// parallelism来规定executor的数量
 		// 下面会有两个exectuor去执行两个exclaimBasicBolt的task，3个executor去执行3个PrintBolt的task。
 		builder.setSpout("spout", new RandomSpout());// 定义一个spout，id为"spout"

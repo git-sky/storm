@@ -31,7 +31,7 @@ public class ExclaimBasicTopo {
 		Config conf = new Config();
 		conf.setDebug(false);
 		conf.setMessageTimeoutSecs(6);//超时时间
-//		conf.setNumAckers(0);// acker线程数量,0 的时候不真正追踪消息，自动ack.
+		conf.setNumAckers(0);// acker线程数量,0 的时候不真正追踪消息，自动ack.
 		 conf.setMaxSpoutPending(3);//spout限流,超过3个消息没有ack或者fail，不发送消息。
 
 		if (args != null && args.length > 0) {
